@@ -1,12 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
+import { HomeScreen, Splash } from './pages'
 
 const App = () => {
   return (
-    <View>
-      <Text>Unklab Hymnal App</Text>
-    </View>
-  )
+      <HomeScreen/>
+  );
 }
 
 export default App
