@@ -1,3 +1,4 @@
 import HomescreenBG from './Homescreen.png'
+import SongBG from './Song.png';
 
-export {HomescreenBG};
+export {HomescreenBG, SongBG};
