@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { HomeScreen, SearchSongs, Song, Splash } from './pages'
+import { HomeScreen, Playlist, SearchSongs, Song, Splash } from './pages'
 
 const App = () => {
   return (
-      <Song/>
+      <Playlist/>
   );
 }
 
