@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
         height:38,
         borderTopStartRadius:8,
         borderTopEndRadius:8,
-        marginHorizontal:78,
+        marginHorizontal:'24%',
         paddingHorizontal:8,
     },
     buttonPlayContainer:{
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
         padding:5
     },
     musicIndicatorContainer:{
-        width: 154,
+        width: '80%',
         height:1,
         flexDirection:'row',
         alignItems:'center',
