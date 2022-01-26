@@ -3,12 +3,12 @@ import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'rea
 import { IcBack, IcPlay, IcStar, SongBG } from '../../assets'
 
 
-const Song = () => {
+const Song = ({navigation}) => {
     return (
         <View style={styles.page}>
             <Image source={SongBG} style={styles.background}/>
             <View style={styles.headerContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {navigation.goBack()}}>
                     <IcBack/>
                 </TouchableOpacity>
                 <TouchableOpacity>
