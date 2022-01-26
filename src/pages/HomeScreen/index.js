@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { HomescreenBG } from '../../assets';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     return (
         <View style={styles.page}>
             <Image source={HomescreenBG} style={styles.background}/>
@@ -15,21 +15,21 @@ const HomeScreen = () => {
                     </View>
                 </View>
                 <View style={styles.buttonWrapper}>
-                    <TouchableOpacity style={styles.buttonContainer('rgba(151,24,14,0.1)')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('SearchSongs')} style={styles.buttonContainer('rgba(151,24,14,0.1)')}>
                         <Text style={styles.buttonText}>Cari Lagu</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer('rgba(151,24,14,0.5)')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Playlist')} style={styles.buttonContainer('rgba(151,24,14,0.5)')}>
                         <Text style={styles.buttonText}>Playlist</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer('rgba(204,159,0,0.8)')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('FavoriteSong')} style={styles.buttonContainer('rgba(204,159,0,0.8)')}>
                         <Text style={styles.buttonText}>Lagu Favorit</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer('rgba(100,100,100,0.5)')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('ListResponsiveReading')} style={styles.buttonContainer('rgba(100,100,100,0.5)')}>
                         <Text style={styles.buttonText}>Bacaan Bersahutan</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.aboutWrapper}>
-                    <TouchableOpacity style={styles.aboutContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('About')} style={styles.aboutContainer}>
                         <Text style={styles.aboutText}>About</Text>
                     </TouchableOpacity>
                 </View>
