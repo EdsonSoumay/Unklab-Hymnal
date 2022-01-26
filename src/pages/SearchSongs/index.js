@@ -1,7 +1,22 @@
 import React from 'react'
-import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, Alert } from 'react-native'
 
-const SearchSongs = () => {
+const SearchSongs = ({navigation}) => {
+
+    const addSong = () => 
+    Alert.alert(
+        "Konfirmasi",
+        "Apakah anda ingin menambahkan lagu kedalam playlist?",
+        [
+            {
+            text: "Tidak",
+            onPress: () => console.log("Tidak"),
+            style: "cancel"
+            },
+            { text: "Ya", onPress: () => console.log("Tambah lagu") }
+        ]
+    );
+
     return (
         <View style={styles.page}>
             <View style={styles.headerContainer}>
@@ -14,106 +29,106 @@ const SearchSongs = () => {
             </View>
             <ScrollView style={styles.listSongsWrapper}>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>1. Before Jehovah's Awful Throne</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>2. Di hadapan hadirathu</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>3. Praise God From Whom All Blessing Flow</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>4. The Lord Is in His Holy Temple</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>5. Kepada Allah Bri Puji</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>6. Tuhan Ada Dalam Kaabah</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>7. Tread softly</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>8. Berdiam, berdiam</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>9. Hear our prayer</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>10. The Lord Be with Us</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>11. Dengar Ya Tuhan</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>12. Ya Tuhan, Iringlah Kami</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.listSongsContainer}>
-                    <TouchableOpacity style={styles.songsContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Song')} style={styles.songsContainer}>
                         <Text style={styles.songsText}>13. Ya Tuhan, Iringlah Kami</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={addSong} style={styles.buttonContainer}>
                         <Text>Add</Text>
                     </TouchableOpacity>
                 </View>
