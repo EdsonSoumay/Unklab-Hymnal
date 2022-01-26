@@ -1,12 +1,27 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView, Alert } from 'react-native'
 import { IcBack } from '../../assets'
 
-const Playlist = () => {
+const Playlist = ({navigation}) => {
+
+    const deleteSong = () => 
+    Alert.alert(
+        "Konfirmasi",
+        "Apakah anda ingin menghapus lagu ini dari playlist?",
+        [
+            {
+            text: "Tidak",
+            onPress: () => console.log("Tidak"),
+            style: "cancel"
+            },
+            { text: "Ya", onPress: () => console.log("Hapus lagu") }
+        ]
+    );
+
     return (
         <View style={styles.page}>
             <View style={styles.headerWrapper}>
-                <TouchableOpacity style={styles.backButtonContainer}>
+                <TouchableOpacity onPress={() => {navigation.goBack()}} style={styles.backButtonContainer}>
                     <IcBack/>
                 </TouchableOpacity>
                 <View style={styles.headerTitleContainer}>
@@ -15,58 +30,58 @@ const Playlist = () => {
             </View>
             <ScrollView style={styles.playlistWrapper}>
                 <View style={styles.playlistContainer}>
-                    <TouchableOpacity style={styles.listContainer}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('Song')}} style={styles.listContainer}>
                         <Text style={styles.listText}>1. Before Jehovah's Awful Throne</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={deleteSong} style={styles.buttonContainer}>
                         <Text>Del.</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.playlistContainer}>
-                    <TouchableOpacity style={styles.listContainer}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('Song')}} style={styles.listContainer}>
                         <Text style={styles.listText}>2. Di hadapan hadirathu</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={deleteSong} style={styles.buttonContainer}>
                         <Text>Del.</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.playlistContainer}>
-                    <TouchableOpacity style={styles.listContainer}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('Song')}} style={styles.listContainer}>
                         <Text style={styles.listText}>4. The Lord Is in His Holy Temple</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={deleteSong} style={styles.buttonContainer}>
                         <Text>Del.</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.playlistContainer}>
-                    <TouchableOpacity style={styles.listContainer}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('Song')}} style={styles.listContainer}>
                         <Text style={styles.listText}>7. Tread softly</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={deleteSong} style={styles.buttonContainer}>
                         <Text>Del.</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.playlistContainer}>
-                    <TouchableOpacity style={styles.listContainer}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('Song')}} style={styles.listContainer}>
                         <Text style={styles.listText}>8. Berdiam, berdiam</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={deleteSong} style={styles.buttonContainer}>
                         <Text>Del.</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.playlistContainer}>
-                    <TouchableOpacity style={styles.listContainer}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('Song')}} style={styles.listContainer}>
                         <Text style={styles.listText}>11. Dengar Ya Tuhan</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={deleteSong} style={styles.buttonContainer}>
                         <Text>Del.</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.playlistContainer}>
-                    <TouchableOpacity style={styles.listContainer}>
+                    <TouchableOpacity onPress={() => {navigation.navigate('Song')}} style={styles.listContainer}>
                         <Text style={styles.listText}>12. Ya Tuhan, Iringlah Kami</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={deleteSong} style={styles.buttonContainer}>
                         <Text>Del.</Text>
                     </TouchableOpacity>
                 </View>
