@@ -1,15 +1,30 @@
 import React from 'react'
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Alert, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { IcAdd, IcBack } from '../../assets'
 
-const ResponsiveReading = () => {
+const ResponsiveReading = ({navigation}) => {
+
+    const addReading = () => 
+    Alert.alert(
+        "Konfirmasi",
+        "Apakah anda ingin menambahkan bacaan ini kedalam playlist",
+        [
+            {
+                text: "Tidak",
+                onPress: () => console.log('Tidak'),
+                style:'cancel'
+            },
+            {   text:"Ya", onPress: () => console.log('Tambah Bacaan')  }
+        ]
+    )
+
     return (
         <View style={styles.page}>
             <View style={styles.headerContainer}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
                     <IcBack/>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={addReading}>
                     <IcAdd/>
                 </TouchableOpacity>
             </View>
